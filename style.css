@@ -1,0 +1,153 @@
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+:root {
+	--header: 3rem;
+	--footer: 40px;
+	--main: calc(100vh - calc(var(--header) + var(--footer)));
+}
+
+body {
+	/* golden ratio */
+	line-height: 1.5;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	/* position: relative; */
+}
+
+/*!Banner*/
+.banner {
+	background-image: url(img/photo-1585202900225-6d3ac20a6962.avif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	width: 30%;
+	background-color: red;
+	display: flex;
+	align-items: center;
+}
+.banner_wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* position: absolute; */
+	height: 30vh;
+	background: rgba(49, 49, 46, 0.5);
+	width: 100%;
+}
+.banner_wrapper span {
+	font-size: 8rem;
+	font-family: Norse;
+}
+
+[alt="odin"] {
+	width: 35%;
+}
+
+/* !content */
+.content {
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: rgb(233, 227, 227);
+	padding-left: 50px;
+}
+
+p {
+	font-size: larger;
+	font-weight: bold;
+}
+
+.content_text p:nth-child(3) {
+	padding: 20px 0 20px 0;
+}
+
+/* !form */
+.form_container {
+	background-color: white;
+	margin-left: -50px;
+	padding-left: 50px;
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	grid-gap: 10px;
+	position: relative;
+}
+
+input {
+	border-radius: 8px;
+	padding: 0.4rem;
+	width: 50%;
+}
+
+/* !label */
+label {
+	display: block;
+	margin-bottom: 0.4rem;
+	font-weight: bold;
+	color: rgb(92, 91, 91);
+}
+
+/* !button */
+input[type="submit"] {
+	background-color: #596d48;
+	border-radius: 8px;
+	border: none;
+	color: #fff;
+	padding: 15px 20px;
+	text-decoration: none;
+	/* margin: 15px 2px; */
+	cursor: pointer;
+	width: 18%;
+	font-weight: bolder;
+	position: absolute;
+	margin-top: 1.5rem;
+}
+
+/* !login */
+.login {
+	margin-top: 6rem;
+}
+a {
+	color: #596d48;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* !validations */
+input::focus {
+	border-color: blue;
+}
+input:invalid {
+	border-color: red;
+}
+input,
+input:valid {
+	border-color: #e5e7eb;
+}
+
+/* Dim and disable the button while the form is invalid */
+form:invalid input[type="submit"] {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+/* impedir que um Input Required já comece com o estilo de CSS :invalid */
+input:required:not(:placeholder-shown):invalid {
+	border-color: #e5e7eb;
+}

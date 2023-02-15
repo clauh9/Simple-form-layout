@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="banner">
+				<div class="banner_wrapper">
+					<img src="img/odin-lined.png" alt="odin" />
+					<span>ODIN</span>
+				</div>
+			</div>
+			<div class="content">
+				<div class="content_text">
+                    <p>
+                        This is not a real online service! You know you need something like
+                        this in your life to help you realize your deepest dreams.
+                    </p>
+                    <p>Sign up <i>now</i> to get started.</h1>
+                    <p>You <i>know</i> you want to.</p>
+                </div>
+
+				<div class="form_container">
+                    <p>Let's do this!</p>
+					<form action="/">
+						<div class="first_name">
+							<label for="first_name">FIRST NAME</label>
+							<input
+								type="text"
+								name="first_name"
+								id="first_name"
+								autocomplete="first_name"
+								required
+							/>
+						</div>
+						<div class="last_name">
+							<label for="last_name">LAST NAME</label>
+							<input
+								type="text"
+								name="last_name"
+								id="last_name"
+								autocomplete="last_name"
+								required
+							/>
+						</div>
+
+						<div class="email">
+							<label for="email">EMAIL</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								autocomplete="email"
+								required
+								pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+							/>
+						</div>
+
+						<div class="phone">
+							<label for="phone">PHONE NUMBER</label>
+							<input
+								type="tel"
+								name="phone"
+								id="phone"
+								autocomplete="phone"
+								pattern="[0-9]{9}"
+							/>
+							<!-- pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" -->
+						</div>
+
+						<div class="passwd">
+							<label for="passwd">PASSWORD</label>
+							<input
+								type="password"
+								name="passwd"
+								id="passwd"
+								autocomplete="passwd"
+							/>
+						</div>
+
+						<div class="comfirm_passwd">
+							<label for="comfirm_passwd">CONFIRM PASSWORD</label>
+							<input
+								type="password"
+								name="comfirm_passwd"
+								id="comfirm_passwd"
+							/>
+						</div>
+
+                        <div class="btn"><input type="submit" value="Create Account" /></div>
+					</form>
+				</div>
+
+                <div class="login">Already have an account? <a href="#">Log in</a></div>
+			
+            </div>
+		</div>
+	</body>
+</html>
