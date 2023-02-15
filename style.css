@@ -110,8 +110,6 @@ input[type="submit"] {
 	border: none;
 	color: #fff;
 	padding: 15px 20px;
-	text-decoration: none;
-	/* margin: 15px 2px; */
 	cursor: pointer;
 	width: 18%;
 	font-weight: bolder;
@@ -121,8 +119,10 @@ input[type="submit"] {
 
 /* !login */
 .login {
+	/* doesnt seem right to fix it like this... */
 	margin-top: 6rem;
 }
+
 a {
 	color: #596d48;
 	font-weight: bold;
@@ -130,15 +130,12 @@ a {
 }
 
 /* !validations */
-input::focus {
-	border-color: blue;
-}
 input:invalid {
 	border-color: red;
 }
-input,
-input:valid {
-	border-color: #e5e7eb;
+
+input:focus {
+	border-color: blue;
 }
 
 /* Dim and disable the button while the form is invalid */
@@ -147,7 +144,8 @@ form:invalid input[type="submit"] {
 	pointer-events: none;
 }
 
-/* impedir que um Input Required já comece com o estilo de CSS :invalid */
-input:required:not(:placeholder-shown):invalid {
-	border-color: #e5e7eb;
+#passwd_no_match {
+	color: red;
+	/* display: block; */
+	font-size: smaller;
 }
